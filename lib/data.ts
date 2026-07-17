@@ -20,8 +20,8 @@ export const EVENTS = [
 ];
 
 export const TEAM = [
-  { name: "Dimas ", role: "President", color: "#355872" },
-  { name: "Sahsi", role: "Web Lead", color: "#FF9C57" },
+  { name: "Dimas Maulana Ishaq, S.Kom", role: "President", color: "#355872" },
+  { name: "Sahsi Kirana Salsabila, S.TR.KOM", role: "Web Lead", color: "#FF9C57" },
 ];
 
 export type Project = {
@@ -30,9 +30,10 @@ export type Project = {
   status: "Live" | "In progress";
   desc: string;
   stack: string[];
+  url: string;
 };
 
 export const PROJECTS: Project[] = [
-  { name: "Portfolio", cat: "Web", status: "Live", desc: "A personal portfolio website of a student built with Next.js and Tailwind CSS.", stack: ["Next.js", "Tailwind CSS"] },
-  { name: "Landing Page ", cat: "Web", status: "Live", desc: "A landing page for a organization of a student built with Next.js and Tailwind CSS.", stack: ["Next.js", "Tailwind CSS", "Typescript"] },
+  { name: "Portfolio", cat: "Web", status: "Live", desc: "A personal portfolio website of a student built with Next.js and Tailwind CSS.", stack: ["Next.js", "Tailwind CSS"], url: "#" },
+  { name: "Landing Page", cat: "Web", status: "Live", desc: "A landing page for an organization of a student built with Next.js and Tailwind CSS.", stack: ["Next.js", "Tailwind CSS", "Typescript"], url: "#" },
 ];

@@ -94,15 +94,27 @@ export default function Home() {
         </div>
         <div className="grid-3">
           {PROJECTS.slice(0, 3).map((p) => (
-            <div key={p.name} className="card" style={{ padding: 22 }}>
+            <Link
+              key={p.name}
+              href={p.url}
+              target={p.url.startsWith("http") ? "_blank" : undefined}
+              rel={p.url.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="card project-card"
+              style={{ padding: 22, textDecoration: "none", color: "inherit", display: "block" }}
+            >
               <CornerHandles />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <h3 className="font-display" style={{ fontSize: 17, margin: 0 }}>
                   {p.name}
                 </h3>
-                <span className="font-mono" style={{ fontSize: 10.5, color: p.status === "Live" ? "var(--live)" : "var(--amber)" }}>
-                  ● {p.status}
-                </span>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span className="font-mono" style={{ fontSize: 10.5, color: p.status === "Live" ? "var(--live)" : "var(--amber)" }}>
+                    ● {p.status}
+                  </span>
+                  <span className="project-arrow" aria-hidden="true">
+                    <ArrowIcon />
+                  </span>
+                </div>
               </div>
               <p style={{ color: "var(--ink-soft)", fontSize: 13.8, lineHeight: 1.55, margin: "10px 0 14px" }}>{p.desc}</p>
               <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
@@ -112,7 +124,7 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

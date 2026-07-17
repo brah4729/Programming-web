@@ -104,6 +104,25 @@ a {
   border-color: var(--accent);
 }
 
+/* Project card link affordance */
+.project-card {
+  cursor: pointer;
+}
+.project-arrow {
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  color: var(--accent-deep);
+  display: flex;
+  align-items: center;
+}
+.project-card:hover .project-arrow,
+.project-card:focus-visible .project-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 .handle {
   position: absolute;
   width: 7px;
