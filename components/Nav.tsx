@@ -48,7 +48,7 @@ export default function Nav() {
             <DotIcon />
           </span>
           <span className="font-display" style={{ fontWeight: 700, fontSize: 17, color: "var(--ink)" }}>
-            Assembly
+            Programming
           </span>
         </Link>
 

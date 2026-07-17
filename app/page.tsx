@@ -35,12 +35,11 @@ export default function Home() {
               together.
             </h1>
             <p style={{ color: "var(--ink-soft)", fontSize: 16.5, lineHeight: 1.6, marginTop: 20, maxWidth: 480 }}>
-              Assembly is a hands-on club for students who&apos;d rather ship something than just talk about it. Weekly
-              build nights, real projects, and members who review your PRs instead of your GPA.
+              Programming adalah sebuah komunitas pemrograman untuk siswa yang ingin belajar dan membangun proyek nyata. Kami menyediakan bimbingan, sumber daya, dan kesempatan untuk berkolaborasi dengan sesama anggota.
             </p>
             <div style={{ display: "flex", gap: 12, marginTop: 30, flexWrap: "wrap" }}>
               <Link href="/#join" className="btn-primary">
-                Join Assembly <ArrowIcon />
+                Join Programming <ArrowIcon />
               </Link>
               <Link href="/projects" className="btn-ghost">
                 View Projects <ArrowIcon />
@@ -160,7 +159,7 @@ export default function Home() {
       <section className="section">
         <Eyebrow>core team</Eyebrow>
         <h2 className="font-display" style={{ fontSize: 30, margin: "0 0 34px", fontWeight: 700 }}>
-          Who runs Assembly.
+          Guru di balik layar.
         </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 14 }}>
           {TEAM.map((m) => (

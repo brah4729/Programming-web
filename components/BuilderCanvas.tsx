@@ -17,7 +17,7 @@ export default function BuilderCanvas() {
           <span style={{ width: 8, height: 8, borderRadius: 8, background: "#FFC84B" }} />
           <span style={{ width: 8, height: 8, borderRadius: 8, background: "#3FC97A" }} />
           <span className="font-mono" style={{ marginLeft: 10, fontSize: 11.5, color: "var(--ink-faint)" }}>
-            assembly.build
+            programming.build
           </span>
         </div>
         <div className="dotgrid" style={{ padding: 22, display: "flex", flexDirection: "column", gap: 10 }}>

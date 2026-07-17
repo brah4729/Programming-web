@@ -21,7 +21,7 @@ const shareTechMono = Share_Tech_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Assembly — student programming club",
+  title: "Programming",
   description:
     "A hands-on programming club for students who'd rather ship something than just talk about it.",
 };
