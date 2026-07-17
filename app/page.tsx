@@ -13,17 +13,7 @@ export default function Home() {
       <Nav />
 
       <section className="dotgrid" style={{ paddingTop: 8 }}>
-        <div
-          className="section"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1.1fr 0.9fr",
-            gap: 48,
-            alignItems: "center",
-            paddingTop: 64,
-            paddingBottom: 80,
-          }}
-        >
+        <div className="section grid-hero">
           <div>
             <Eyebrow>student programming club · est. 2019</Eyebrow>
             <h1
@@ -46,12 +36,14 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <BuilderCanvas />
+          <div className="hero-canvas-hide">
+            <BuilderCanvas />
+          </div>
         </div>
       </section>
 
       <section style={{ borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)", background: "var(--bg-elevated)" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "30px 24px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "30px 24px" }} className="stats-grid">
           {STATS.map((s) => (
             <div key={s.label}>
               <div className="font-display" style={{ fontSize: 26, fontWeight: 700 }}>
@@ -70,7 +62,7 @@ export default function Home() {
         <h2 className="font-display" style={{ fontSize: 30, margin: "0 0 34px", fontWeight: 700 }}>
           Pick your stack.
         </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+        <div className="grid-4">
           {TRACKS.map((t) => (
             <div key={t.name} className="card" style={{ padding: 22 }}>
               <CornerHandles />
@@ -100,7 +92,7 @@ export default function Home() {
             See all projects <ArrowIcon />
           </Link>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+        <div className="grid-3">
           {PROJECTS.slice(0, 3).map((p) => (
             <div key={p.name} className="card" style={{ padding: 22 }}>
               <CornerHandles />
@@ -124,44 +116,12 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <section style={{ background: "var(--bg-elevated)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)", padding: "88px 24px" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <Eyebrow>build nights &amp; workshops</Eyebrow>
-          <h2 className="font-display" style={{ fontSize: 30, margin: "0 0 34px", fontWeight: 700 }}>
-            What&apos;s coming up.
-          </h2>
-          <div>
-            {EVENTS.map((e, i) => (
-              <div
-                key={e.title}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 24,
-                  padding: "18px 0",
-                  borderTop: i === 0 ? "1px solid var(--line)" : "none",
-                  borderBottom: "1px solid var(--line)",
-                  flexWrap: "wrap",
-                }}
-              >
-                <span className="font-mono" style={{ width: 70, color: "var(--ink-faint)", fontSize: 13.5 }}>
-                  {e.date}
-                </span>
-                <span style={{ flex: 1, fontWeight: 500, fontSize: 15.5, minWidth: 200 }}>{e.title}</span>
-                <span className="tag">{e.type}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section">
         <Eyebrow>core team</Eyebrow>
         <h2 className="font-display" style={{ fontSize: 30, margin: "0 0 34px", fontWeight: 700 }}>
           Guru di balik layar.
         </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 14 }}>
+        <div className="grid-6">
           {TEAM.map((m) => (
             <div key={m.name} className="card" style={{ padding: "18px 14px", textAlign: "center" }}>
               <CornerHandles />
@@ -189,7 +149,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       <section id="join" style={{ background: "var(--emphasis-bg)", padding: "90px 24px" }}>
         <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
           <div className="font-mono eyebrow" style={{ justifyContent: "center" }}>

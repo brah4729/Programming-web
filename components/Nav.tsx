@@ -52,12 +52,21 @@ export default function Nav() {
           </span>
         </Link>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
+        {/* Desktop nav — hidden on mobile */}
+        <div className="nav-links">
           {LINKS.map((l) => (
             <Link key={l.href} href={l.href} className={`navlink ${pathname === l.href ? "active" : ""}`}>
               {l.label}
             </Link>
           ))}
+          <ThemeToggle />
+          <Link href="/#join" className="btn-primary" style={{ padding: "9px 16px", fontSize: 13.5 }}>
+            Join
+          </Link>
+        </div>
+
+        {/* Mobile right side — ThemeToggle + Join only */}
+        <div className="nav-mobile-actions">
           <ThemeToggle />
           <Link href="/#join" className="btn-primary" style={{ padding: "9px 16px", fontSize: 13.5 }}>
             Join

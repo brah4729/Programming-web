@@ -272,3 +272,135 @@ input:focus-visible {
     padding: 56px 18px;
   }
 }
+
+/* ---- Responsive grid utilities ---- */
+.grid-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  padding-top: 64px;
+  padding-bottom: 80px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ---- Nav ---- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Mobile-only actions (ThemeToggle + Join): hidden on desktop */
+.nav-mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---- Input full width on mobile ---- */
+.join-input-mobile {
+  width: 260px;
+}
+
+@media (max-width: 640px) {
+  .join-input-mobile {
+    width: 100%;
+  }
+
+  /* Hero: single column, hide canvas */
+  .grid-hero {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+    padding-bottom: 48px;
+    gap: 32px;
+  }
+
+  .hero-canvas-hide {
+    display: none;
+  }
+
+  /* Stats: 2 columns */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tracks: 1 column */
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects: 1 column */
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Team: 3 columns */
+  .grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Nav: hide desktop links, show mobile actions */
+  .nav-links {
+    display: none;
+  }
+  .nav-mobile-actions {
+    display: flex;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  /* Hero: single column */
+  .grid-hero {
+    grid-template-columns: 1fr;
+    padding-top: 48px;
+    padding-bottom: 60px;
+  }
+  .hero-canvas-hide {
+    display: none;
+  }
+
+  /* Stats: 2 columns */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tracks: 2 columns */
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Projects: 1 column */
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Team: 3 columns */
+  .grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
