@@ -55,9 +55,9 @@ export default function ProjectsPage() {
                 fontSize: 12.5,
                 padding: "7px 13px",
                 borderRadius: 8,
-                border: `1.5px solid ${filter === c ? "var(--indigo)" : "var(--line)"}`,
-                background: filter === c ? "var(--indigo-tint)" : "var(--bg-elevated)",
-                color: filter === c ? "var(--indigo-deep)" : "var(--ink-soft)",
+                border: `1.5px solid ${filter === c ? "var(--accent)" : "var(--line)"}`,
+                background: filter === c ? "var(--accent-tint)" : "var(--bg-elevated)",
+                color: filter === c ? "var(--accent-deep)" : "var(--ink-soft)",
                 fontWeight: 500,
               }}
             >

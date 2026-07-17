@@ -17,11 +17,11 @@ export default function BuilderCanvas() {
           <span style={{ width: 8, height: 8, borderRadius: 8, background: "#FFC84B" }} />
           <span style={{ width: 8, height: 8, borderRadius: 8, background: "#3FC97A" }} />
           <span className="font-mono" style={{ marginLeft: 10, fontSize: 11.5, color: "var(--ink-faint)" }}>
-            programming.build
+            assembly.build
           </span>
         </div>
         <div className="dotgrid" style={{ padding: 22, display: "flex", flexDirection: "column", gap: 10 }}>
-          <div style={{ background: "var(--bg-elevated)", border: "1.5px dashed var(--indigo)", borderRadius: 10, padding: "10px 12px" }}>
+          <div style={{ background: "var(--bg-elevated)", border: "1.5px dashed var(--accent)", borderRadius: 10, padding: "10px 12px" }}>
             <span className="tag">component: navbar</span>
           </div>
           <div style={{ background: "var(--bg-elevated)", border: "1px solid var(--line)", borderRadius: 10, padding: "16px 14px" }}>

@@ -35,11 +35,12 @@ export default function Home() {
               together.
             </h1>
             <p style={{ color: "var(--ink-soft)", fontSize: 16.5, lineHeight: 1.6, marginTop: 20, maxWidth: 480 }}>
-              Programming adalah sebuah program talent day yang dapat membantu kamu untuk mengembangkan aplikasi dan web serta juga skill
+              Assembly is a hands-on club for students who&apos;d rather ship something than just talk about it. Weekly
+              build nights, real projects, and members who review your PRs instead of your GPA.
             </p>
             <div style={{ display: "flex", gap: 12, marginTop: 30, flexWrap: "wrap" }}>
               <Link href="/#join" className="btn-primary">
-                Join Programming <ArrowIcon />
+                Join Assembly <ArrowIcon />
               </Link>
               <Link href="/projects" className="btn-ghost">
                 View Projects <ArrowIcon />
@@ -95,7 +96,7 @@ export default function Home() {
           <Link
             href="/projects"
             className="font-mono"
-            style={{ fontSize: 13.5, display: "flex", alignItems: "center", gap: 6, color: "var(--indigo-deep)", fontWeight: 500, textDecoration: "none" }}
+            style={{ fontSize: 13.5, display: "flex", alignItems: "center", gap: 6, color: "var(--accent-deep)", fontWeight: 500, textDecoration: "none" }}
           >
             See all projects <ArrowIcon />
           </Link>

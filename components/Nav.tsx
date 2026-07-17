@@ -40,7 +40,7 @@ export default function Nav() {
               width: 26,
               height: 26,
               borderRadius: 7,
-              background: "var(--indigo)",
+              background: "var(--accent)",
               display: "grid",
               placeItems: "center",
             }}
@@ -48,7 +48,7 @@ export default function Nav() {
             <DotIcon />
           </span>
           <span className="font-display" style={{ fontWeight: 700, fontSize: 17, color: "var(--ink)" }}>
-            Programming
+            Assembly
           </span>
         </Link>
 

@@ -20,12 +20,12 @@ export const EVENTS = [
 ];
 
 export const TEAM = [
-  { name: "Rin Okafor", role: "President", color: "#6D72FF" },
+  { name: "Rin Okafor", role: "President", color: "#355872" },
   { name: "Leo Marsh", role: "Web Lead", color: "#FF9C57" },
   { name: "Priya Nandan", role: "AI/ML Lead", color: "#2FBF8F" },
   { name: "Dario Reyes", role: "Infra Lead", color: "#FF5C7A" },
-  { name: "Mei Tanaka", role: "Events", color: "#9C8BFF" },
-  { name: "Sam Okoye", role: "Open Source", color: "#4FB6E8" },
+  { name: "Mei Tanaka", role: "Events", color: "#4FA3C7" },
+  { name: "Sam Okoye", role: "Open Source", color: "#5A97BA" },
 ];
 
 export type Project = {
