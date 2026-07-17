@@ -326,6 +326,43 @@ input:focus-visible {
   gap: 20px;
 }
 
+/* ---- Team centered flex layout ---- */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.team-card {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.team-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border: 2.5px solid var(--line);
+}
+
+.team-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+
 /* ---- Nav ---- */
 .nav-links {
   display: flex;

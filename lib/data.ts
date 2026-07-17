@@ -20,8 +20,8 @@ export const EVENTS = [
 ];
 
 export const TEAM = [
-  { name: "Dimas Maulana Ishaq, S.Kom", role: "Web Developer", color: "#355872" },
-  { name: "Sahsi Kirana Salsabila, S.TR.KOM", role: "Web Developer", color: "#FF9C57" },
+  { name: "Dimas Maulana Ishaq, S.Kom", role: "Web Developer", color: "#355872", photo: "Dimas.png" },
+  { name: "Sahsi Kirana Salsabila, S.TR.KOM", role: "Web Developer", color: "#FF9C57", photo: "Shashi.png" },
 ];
 
 export type Project = {

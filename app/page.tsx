@@ -132,28 +132,26 @@ export default function Home() {
         <h2 className="font-display" style={{ fontSize: 30, margin: "0 0 34px", fontWeight: 700 }}>
           Guru di balik layar.
         </h2>
-        <div className="grid-6">
+        <div className="team-grid">
           {TEAM.map((m) => (
-            <div key={m.name} className="card" style={{ padding: "18px 14px", textAlign: "center" }}>
+            <div key={m.name} className="card team-card" style={{ padding: "22px 18px", textAlign: "center" }}>
               <CornerHandles />
-              <div
-                style={{
-                  width: 44,
-                  height: 44,
-                  borderRadius: 10,
-                  background: m.color,
-                  margin: "0 auto 12px",
-                  display: "grid",
-                  placeItems: "center",
-                  color: "#fff",
-                  fontWeight: 700,
-                }}
-                className="font-display"
-              >
-                {m.name.split(" ").map((n) => n[0]).join("")}
-              </div>
-              <div style={{ fontWeight: 600, fontSize: 13.5 }}>{m.name}</div>
-              <div className="font-mono" style={{ fontSize: 11, color: "var(--ink-faint)", marginTop: 3 }}>
+              {m.photo ? (
+                <img
+                  src={m.photo}
+                  alt={m.name}
+                  className="team-photo"
+                />
+              ) : (
+                <div
+                  className="font-display team-avatar"
+                  style={{ background: m.color }}
+                >
+                  {m.name.trim().split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                </div>
+              )}
+              <div style={{ fontWeight: 600, fontSize: 13.5, marginTop: 12 }}>{m.name}</div>
+              <div className="font-mono" style={{ fontSize: 11, color: "var(--ink-faint)", marginTop: 4 }}>
                 {m.role}
               </div>
             </div>
