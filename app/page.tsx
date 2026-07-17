@@ -15,7 +15,6 @@ export default function Home() {
       <section className="dotgrid" style={{ paddingTop: 8 }}>
         <div className="section grid-hero">
           <div>
-            <Eyebrow>student programming club · est. 2019</Eyebrow>
             <h1
               className="font-display"
               style={{ fontSize: "clamp(34px, 5vw, 54px)", lineHeight: 1.06, fontWeight: 700, margin: 0, letterSpacing: "-0.02em" }}
