@@ -4,22 +4,22 @@
 
 /* ---------- theme tokens (dark is the default / primary theme) ---------- */
 :root {
-  --bg: #0b0c12;
-  --bg-elevated: #14151f;
-  --bg-input: #171826;
-  --line: #23242f;
-  --ink: #f4f5f8;
-  --ink-soft: #a7a9bd;
-  --ink-faint: #6f7186;
+  --bg: #30302e;
+  --bg-elevated: #3a3937;
+  --bg-input: #3a3937;
+  --line: #4a4945;
+  --ink: #f4f5f8; 
+  --ink-soft: #b3b1ac;
+  --ink-faint: #85837d;
   --accent: #3c6e8f;
   --accent-deep: #5a97ba;
-  --accent-tint: #142631;
+  --accent-tint: #223644;
   --amber: #ff9c57;
-  --dot: #1e202b;
+  --dot: #454340;
   --live: #35d399;
   --shadow: rgba(0, 0, 0, 0.55);
-  --emphasis-bg: #08090d;
-  --emphasis-ink-soft: #9799ad;
+  --emphasis-bg: #242422;
+  --emphasis-ink-soft: #9c9a95;
 }
 
 :root.light {
