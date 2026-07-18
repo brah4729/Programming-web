@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     "A hands-on programming club for students who'd rather ship something than just talk about it.",
 };
 
-// Runs before paint so a saved "light" preference applies with no flash.
-// Dark is the default theme: no class needed, it's what :root already is.
+// Runs before paint so a saved "dark" preference applies with no flash.
+// Light is the default theme: no class needed, it's what :root already is.
 const themeInitScript = `
 try {
   var t = localStorage.getItem('asm-theme');
-  if (t === 'light') document.documentElement.classList.add('light');
+  if (t === 'dark') document.documentElement.classList.add('dark');
 } catch (e) {}
 `;
 

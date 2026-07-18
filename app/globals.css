@@ -2,27 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---------- theme tokens (dark is the default / primary theme) ---------- */
+/* ---------- theme tokens (light is the default / primary theme) ---------- */
 :root {
-  --bg: #30302e;
-  --bg-elevated: #3a3937;
-  --bg-input: #3a3937;
-  --line: #4a4945;
-  --ink: #f4f5f8; 
-  --ink-soft: #b3b1ac;
-  --ink-faint: #85837d;
-  --accent: #3c6e8f;
-  --accent-deep: #5a97ba;
-  --accent-tint: #223644;
-  --amber: #ff9c57;
-  --dot: #454340;
-  --live: #35d399;
-  --shadow: rgba(0, 0, 0, 0.55);
-  --emphasis-bg: #242422;
-  --emphasis-ink-soft: #9c9a95;
-}
-
-:root.light {
   --bg: #f3f4f8;
   --bg-elevated: #ffffff;
   --bg-input: #ffffff;
@@ -39,6 +20,25 @@
   --shadow: rgba(18, 19, 26, 0.18);
   --emphasis-bg: #12131a;
   --emphasis-ink-soft: #9799ad;
+}
+
+:root.dark {
+  --bg: #30302e;
+  --bg-elevated: #3a3937;
+  --bg-input: #3a3937;
+  --line: #4a4945;
+  --ink: #f4f5f8; 
+  --ink-soft: #b3b1ac;
+  --ink-faint: #85837d;
+  --accent: #3c6e8f;
+  --accent-deep: #5a97ba;
+  --accent-tint: #223644;
+  --amber: #ff9c57;
+  --dot: #454340;
+  --live: #35d399;
+  --shadow: rgba(0, 0, 0, 0.55);
+  --emphasis-bg: #242422;
+  --emphasis-ink-soft: #9c9a95;
 }
 
 * {

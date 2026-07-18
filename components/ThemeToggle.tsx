@@ -4,22 +4,22 @@ import { useEffect, useState } from "react";
 import { SunIcon, MoonIcon } from "./Icons";
 
 export default function ThemeToggle() {
-  const [isLight, setIsLight] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setIsLight(document.documentElement.classList.contains("light"));
+    setIsDark(document.documentElement.classList.contains("dark"));
     setMounted(true);
   }, []);
 
   function toggle() {
     const root = document.documentElement;
-    const next = !root.classList.contains("light");
-    root.classList.toggle("light", next);
+    const next = !root.classList.contains("dark");
+    root.classList.toggle("dark", next);
     try {
-      localStorage.setItem("asm-theme", next ? "light" : "dark");
+      localStorage.setItem("asm-theme", next ? "dark" : "light");
     } catch (e) {}
-    setIsLight(next);
+    setIsDark(next);
   }
 
   // Avoid a hydration mismatch: render a neutral placeholder until mounted.
@@ -31,10 +31,10 @@ export default function ThemeToggle() {
     <button
       onClick={toggle}
       className="icon-btn"
-      aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
-      title={isLight ? "Switch to dark mode" : "Switch to light mode"}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {isLight ? <MoonIcon /> : <SunIcon />}
+      {isDark ? <SunIcon /> : <MoonIcon />}
     </button>
   );
 }
