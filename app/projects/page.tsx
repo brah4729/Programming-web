@@ -5,7 +5,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import { Eyebrow, CornerHandles } from "@/components/Bits";
-import { ArrowIcon, GithubIcon, ExternalIcon } from "@/components/Icons";
+import { ArrowIcon, ExternalIcon } from "@/components/Icons";
 import { PROJECTS, Project } from "@/lib/data";
 
 const CATS: Array<Project["cat"] | "All"> = ["All", "Web", "AI+ML", "Systems", "Mobile"];
@@ -68,17 +68,29 @@ export default function ProjectsPage() {
       </section>
 
       <section className="section" style={{ paddingTop: 0 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 }}>
+        <div className="grid-3">
           {shown.map((p) => (
-            <div key={p.name} className="card" style={{ padding: 24 }}>
+            <Link
+              key={p.name}
+              href={p.url}
+              target={p.url.startsWith("http") ? "_blank" : undefined}
+              rel={p.url.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="card project-card"
+              style={{ padding: 24, textDecoration: "none", color: "inherit", display: "block" }}
+            >
               <CornerHandles />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <h3 className="font-display" style={{ fontSize: 18.5, margin: 0 }}>
                   {p.name}
                 </h3>
-                <span className="font-mono" style={{ fontSize: 10.5, color: p.status === "Live" ? "var(--live)" : "var(--amber)" }}>
-                  ● {p.status}
-                </span>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span className="font-mono" style={{ fontSize: 10.5, color: p.status === "Live" ? "var(--live)" : "var(--amber)" }}>
+                    ● {p.status}
+                  </span>
+                  <span className="project-arrow" aria-hidden="true">
+                    <ArrowIcon />
+                  </span>
+                </div>
               </div>
               <p style={{ color: "var(--ink-soft)", fontSize: 14, lineHeight: 1.6, margin: "12px 0 16px" }}>{p.desc}</p>
               <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 18 }}>
@@ -89,22 +101,11 @@ export default function ProjectsPage() {
                 ))}
               </div>
               <div style={{ display: "flex", gap: 16, borderTop: "1px solid var(--line)", paddingTop: 14 }}>
-                <a
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                  style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "var(--ink-soft)", textDecoration: "none" }}
-                >
-                  <GithubIcon /> Source
-                </a>
-                <a
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                  style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "var(--ink-soft)", textDecoration: "none" }}
-                >
-                  <ExternalIcon /> Live
-                </a>
+                <span style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "var(--ink-soft)" }}>
+                  <ExternalIcon /> Open project
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

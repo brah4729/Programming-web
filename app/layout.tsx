@@ -44,6 +44,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${poppins.variable} ${shareTech.variable} ${shareTechMono.variable}`}
+      suppressHydrationWarning
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
