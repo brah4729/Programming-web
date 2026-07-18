@@ -27,9 +27,9 @@ export default function Home() {
               Programming adalah sebuah komunitas pemrograman untuk siswa yang ingin belajar dan membangun proyek nyata. Kami menyediakan bimbingan, sumber daya, dan kesempatan untuk berkolaborasi dengan sesama anggota.
             </p>
             <div style={{ display: "flex", gap: 12, marginTop: 30, flexWrap: "wrap" }}>
-              <Link href="/#join" className="btn-primary">
+              <a href="https://www.instagram.com/progaming_penus/" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Join Programming <ArrowIcon />
-              </Link>
+              </a>
               <Link href="/projects" className="btn-ghost">
                 View Projects <ArrowIcon />
               </Link>

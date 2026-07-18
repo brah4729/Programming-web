@@ -60,17 +60,29 @@ export default function Nav() {
             </Link>
           ))}
           <ThemeToggle />
-          <Link href="/#join" className="btn-primary" style={{ padding: "9px 16px", fontSize: 13.5 }}>
+          <a
+            href="https://www.instagram.com/progaming_penus/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+            style={{ padding: "9px 16px", fontSize: 13.5 }}
+          >
             Join
-          </Link>
+          </a>
         </div>
 
         {/* Mobile right side — ThemeToggle + Join only */}
         <div className="nav-mobile-actions">
           <ThemeToggle />
-          <Link href="/#join" className="btn-primary" style={{ padding: "9px 16px", fontSize: 13.5 }}>
+          <a
+            href="https://www.instagram.com/progaming_penus/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+            style={{ padding: "9px 16px", fontSize: 13.5 }}
+          >
             Join
-          </Link>
+          </a>
         </div>
       </div>
     </div>

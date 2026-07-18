@@ -39,4 +39,5 @@ export const PROJECTS: Project[] = [
   { name: "Product Page", cat: "Web", status: "Live", desc: "A product page for a student project built for a tea product", stack: ["Next.js", "Tailwind CSS"], url: "https://lambent-malasada-83c0e1.netlify.app/" },
   { name: "Toko Kasual", cat: "Web", status: "Live", desc: "An e-commerce website for a casual wear store.", stack: ["PHP"], url: "https://toko-casual-production.up.railway.app/"},
   { name: "E-Voting", cat: "Web", status: "Live", desc: "An e-voting website for a student organization.", stack: ["PHP"], url: "https://agent-6a5a3450141721b3fa02f5ca--e-votinggg.netlify.app/"},
+ { name: "Portfolio", cat: "Web", status: "Live", desc: "A personal portfolio website of a student built with Next.js and Tailwind CSS.", stack: ["Next.js", "Tailwind CSS"], url: "https://portofolio-one-black-90.vercel.app" },
 ];
